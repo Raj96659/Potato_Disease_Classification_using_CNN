@@ -69,7 +69,10 @@ A clean, responsive **Bootstrap 5** interface displays:
 
 <h2>📸 Preview</h2>
 <p align="center">
-  <img src="https://github.com/Raj96659/Laptop-Price-Predictor-Smart-ML-Web-App/blob/main/Screenshot%202025-10-30%20004753.png" width="500">
+  <img src="https://github.com/Raj96659/Potato_Disease_Classification_using_CNN/blob/main/Screenshot%202025-11-02%20093737.png" width="500">
+</p>
+<p align="center">
+  <img src="https://github.com/Raj96659/Potato_Disease_Classification_using_CNN/blob/main/Screenshot%202025-11-02%20093737.png" width="500">
 </p>
 
 ## 🚀 Future Improvements
