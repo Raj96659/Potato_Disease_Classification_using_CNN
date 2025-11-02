@@ -1,95 +1,66 @@
+# 🥔 Potato Disease Classification using CNN & Flask
 
-# 🥔 Crop Potato Disease Classification using CNN & Flask
-
-## 📘 Overview
-This project is a **Deep Learning–based web application** that classifies potato leaf images into three categories:
-- **Potato — Early Blight**
-- **Potato — Late Blight**
-- **Potato — Healthy**
-
-It uses a **Convolutional Neural Network (CNN)** trained on a potato leaf disease dataset and deployed using **Flask**.  
-Users can upload images of potato leaves to instantly get disease predictions along with confidence levels.
+A deep learning web app that classifies **potato leaf diseases** — *Early Blight*, *Late Blight*, or *Healthy* — using a **Convolutional Neural Network (CNN)** trained in TensorFlow and deployed with Flask.
 
 ---
 
-## 🎯 Objective
-To assist farmers and researchers by providing an automated system that identifies potato plant diseases early —  
-reducing manual inspection effort and improving crop yield.
+## 📘 Project Overview
+This project helps **farmers and researchers** detect potato leaf diseases quickly and accurately.  
+The CNN model is trained on the *Potato Leaf Disease Dataset* from Kaggle and integrated with a Flask web app for **real-time image-based predictions**.
 
 ---
 
-## ⚙️ Tech Stack
+## 🧠 Model Details
 
-| Component | Technology Used |
-|------------|-----------------|
-| **Language** | Python |
-| **Framework** | Flask |
-| **Deep Learning** | TensorFlow / Keras |
-| **Frontend** | HTML, CSS, Bootstrap |
-| **IDE / Tools** | VS Code / Jupyter Notebook |
-| **Deployment (optional)** | Render / Heroku / Localhost |
+### 📊 Dataset
+**Source:** [Potato Leaf Disease Dataset (Kaggle)](https://www.kaggle.com/datasets)  
+**Classes:**
+- Potato — Early Blight  
+- Potato — Late Blight  
+- Potato — Healthy  
 
 ---
 
-## 🧩 System Workflow
+### 🧩 CNN Architecture
+A custom **Convolutional Neural Network** built using **TensorFlow**:
 
-### 1️⃣ Model Training (TensorFlow)
-- The dataset is split into **Train**, **Validation**, and **Test** sets.
-- Images are resized to a consistent shape (`255x255x3`).
-- A **CNN** model is trained for **20–70 epochs** with **Early Stopping** to prevent overfitting.
-- The model is compiled using:
-  ```python
-  model.compile(optimizer='adam',
-                loss='sparse_categorical_crossentropy',
-                metrics=['accuracy'])
-
-  ## 🧠 Model Architecture
+- Convolutional + MaxPooling layers for feature extraction  
+- Dense layers for classification  
+- ReLU activation & Softmax output layer  
 
 | Parameter | Value |
 |------------|--------|
 | **Model Type** | Convolutional Neural Network (CNN) |
-| **Input Image Size** | 255×255×3 |
+| **Input Image Size** | 255 × 255 × 3 |
 | **Output Classes** | Early Blight, Late Blight, Healthy |
 | **Optimizer** | Adam |
 | **Loss Function** | Sparse Categorical Crossentropy |
 | **Batch Size** | 32 |
-| **Epochs** | 20 (with EarlyStopping) |
+| **Epochs** | 70 (with EarlyStopping) |
 
 ---
 
-## 🧩 Model Training
-Trained model is saved as:
-- Crop_Disease_Classification.h5
-
----
-
-## 2️⃣ Flask Backend
-
-Flask handles image uploads and prediction requests.
-
-When a user uploads an image:
-1. The image is stored in the `static/` folder.  
-2. TensorFlow preprocesses and reshapes the image.  
-3. The CNN model predicts the class and confidence.  
-4. Flask renders results on the web page.
-
----
-
-## 3️⃣ Frontend (HTML + Bootstrap)
-
-A simple and clean UI that includes:
-- Image upload box  
-- Display of uploaded image  
-- Predicted label and confidence percentage  
-- Error handling messages (e.g., “No file selected”)  
-
-Styled using **Bootstrap 5** and CSS gradients for a modern appearance.
-
----
-
-## 🖥️ Flask Application Explanation
+## ⚙️ Flask Backend
 
 ### 🔹 Model Loading
-```python
-model = tf.keras.models.load_model('Crop_Disease_Classification.h5')
+The trained CNN model **`Crop_Disease_Classification.h5`** is loaded for inference.
 
+### 🔹 Prediction Function
+✅ Converts uploaded image into a tensor  
+✅ Feeds it to the CNN model  
+✅ Returns the predicted **class label** and **confidence score**
+
+### 🔹 Routes
+- `'/'` → Handles image upload and prediction display  
+- Validates allowed file types (`jpg`, `jpeg`, `png`)  
+
+---
+
+## 🌐 Frontend (index.html)
+A clean, responsive **Bootstrap 5** interface displays:
+
+- Image upload section  
+- Uploaded image preview  
+- Predicted label and confidence percentage  
+
+**Example Output:**
