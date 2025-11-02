@@ -72,7 +72,7 @@ A clean, responsive **Bootstrap 5** interface displays:
   <img src="https://github.com/Raj96659/Potato_Disease_Classification_using_CNN/blob/main/Screenshot%202025-11-02%20093737.png" width="500">
 </p>
 <p align="center">
-  <img src="https://github.com/Raj96659/Potato_Disease_Classification_using_CNN/blob/main/Screenshot%202025-11-02%20093737.png" width="500">
+  <img src="https://github.com/Raj96659/Potato_Disease_Classification_using_CNN/blob/main/Screenshot%202025-11-02%20093813.png" width="500">
 </p>
 
 ## 🚀 Future Improvements
