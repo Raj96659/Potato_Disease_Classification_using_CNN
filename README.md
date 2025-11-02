@@ -1,14 +1,14 @@
 <h1 align="center">🥔 Potato Disease Classification using CNN & Flask</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge">
-  <img src="https://img.shields.io/badge/Framework-Flask-black?style=for-the-badge&logo=flask&logoColor=white" alt="Flask Badge">
-  <img src="https://img.shields.io/badge/Deep%20Learning-TensorFlow-orange?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow Badge">
-  <img src="https://img.shields.io/badge/Library-Keras-red?style=for-the-badge&logo=keras&logoColor=white" alt="Keras Badge">
-  <img src="https://img.shields.io/badge/Library-Pandas-teal?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas Badge">
-  <img src="https://img.shields.io/badge/Library-NumPy-blue?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy Badge">
-  <img src="https://img.shields.io/badge/Library-Matplotlib-lightblue?style=for-the-badge&logo=plotly&logoColor=white" alt="Matplotlib Badge">
-  <img src="https://img.shields.io/badge/Model-CNN-green?style=for-the-badge" alt="CNN Badge">
+  <img src="https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Flask-black?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+  <img src="https://img.shields.io/badge/TensorFlow-orange?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow">
+  <img src="https://img.shields.io/badge/Keras-red?style=for-the-badge&logo=keras&logoColor=white" alt="Keras">
+  <img src="https://img.shields.io/badge/Pandas-teal?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/NumPy-blue?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+  <img src="https://img.shields.io/badge/Matplotlib-lightblue?style=for-the-badge&logo=plotly&logoColor=white" alt="Matplotlib">
+  <img src="https://img.shields.io/badge/CNN-green?style=for-the-badge" alt="CNN">
 </p>
 
 
