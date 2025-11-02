@@ -13,7 +13,7 @@ The CNN model is trained on the *Potato Leaf Disease Dataset* from Kaggle and in
 ## 🧠 Model Details
 
 ### 📊 Dataset
-**Source:** [Potato Leaf Disease Dataset (Kaggle)](https://www.kaggle.com/datasets)  
+**Source:** [Potato Leaf Disease Dataset (Kaggle)](https://www.kaggle.com/datasets/muhammadardiputra/potato-leaf-disease-dataset)  
 **Classes:**
 - Potato — Early Blight  
 - Potato — Late Blight  
@@ -64,3 +64,18 @@ A clean, responsive **Bootstrap 5** interface displays:
 - Predicted label and confidence percentage  
 
 **Example Output:**
+- Predicted Label: Potato — Early Blight
+- Confidence: 92.4%
+
+## 🚀 Future Improvements
+
+- Extend support for multiple crops (e.g., tomato, corn, etc.)
+- Deploy on Render, Vercel, or Hugging Face Spaces
+- Add database logging for predictions
+- Introduce voice-based output
+
+## 🙌 Acknowledgements
+
+- Dataset: Potato Leaf Disease Dataset – Kaggle
+- Frameworks: TensorFlow, Flask
+- Developer: Raj Sonawane
