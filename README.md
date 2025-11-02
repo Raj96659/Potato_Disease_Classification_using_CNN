@@ -67,6 +67,11 @@ A clean, responsive **Bootstrap 5** interface displays:
 - Predicted Label: Potato — Early Blight
 - Confidence: 92.4%
 
+<h2>📸 Preview</h2>
+<p align="center">
+  <img src="https://github.com/Raj96659/Laptop-Price-Predictor-Smart-ML-Web-App/blob/main/Screenshot%202025-10-30%20004753.png" width="500">
+</p>
+
 ## 🚀 Future Improvements
 
 - Extend support for multiple crops (e.g., tomato, corn, etc.)
