@@ -1,0 +1,44 @@
+# Potato_Disease_Classification_using_CNN
+# 🥔 Crop Potato Disease Classification using CNN & Flask
+
+## 📘 Overview
+This project is a **Deep Learning–based web application** that classifies potato leaf images into three categories:
+- **Potato — Early Blight**
+- **Potato — Late Blight**
+- **Potato — Healthy**
+
+It uses a **Convolutional Neural Network (CNN)** trained on a potato leaf disease dataset and deployed using **Flask**.  
+Users can upload images of potato leaves to instantly get disease predictions along with confidence levels.
+
+---
+
+## 🎯 Objective
+To assist farmers and researchers by providing an automated system that identifies potato plant diseases early —  
+reducing manual inspection effort and improving crop yield.
+
+---
+
+## ⚙️ Tech Stack
+
+| Component | Technology Used |
+|------------|-----------------|
+| **Language** | Python |
+| **Framework** | Flask |
+| **Deep Learning** | TensorFlow / Keras |
+| **Frontend** | HTML, CSS, Bootstrap |
+| **IDE / Tools** | VS Code / Jupyter Notebook |
+| **Deployment (optional)** | Render / Heroku / Localhost |
+
+---
+
+## 🧩 System Workflow
+
+### 1️⃣ Model Training (TensorFlow)
+- The dataset is split into **Train**, **Validation**, and **Test** sets.
+- Images are resized to a consistent shape (`255x255x3`).
+- A **CNN** model is trained for **20–70 epochs** with **Early Stopping** to prevent overfitting.
+- The model is compiled using:
+  ```python
+  model.compile(optimizer='adam',
+                loss='sparse_categorical_crossentropy',
+                metrics=['accuracy'])
