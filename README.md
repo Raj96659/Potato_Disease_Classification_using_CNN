@@ -1,4 +1,5 @@
-<h1 align="center">🌾 Crop Disease Classification using VGG16 & Flask</h1>
+<h1 align="center">🌾 
+Real-Time Crop Disease Detection Web App (CNN, VGG16 + Flask)</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python&logoColor=white" alt="Python">
