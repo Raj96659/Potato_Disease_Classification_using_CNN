@@ -1,10 +1,11 @@
-<h1 align="center">🥔 Potato Disease Classification using CNN & Flask</h1>
+<h1 align="center">🌾 Crop Disease Classification using VGG16 & Flask</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Flask-black?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
   <img src="https://img.shields.io/badge/TensorFlow-orange?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow">
   <img src="https://img.shields.io/badge/Keras-red?style=for-the-badge&logo=keras&logoColor=white" alt="Keras">
+  <img src="https://img.shields.io/badge/VGG16-purple?style=for-the-badge" alt="VGG16">
   <img src="https://img.shields.io/badge/Pandas-teal?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
   <img src="https://img.shields.io/badge/NumPy-blue?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
   <img src="https://img.shields.io/badge/Matplotlib-lightblue?style=for-the-badge&logo=plotly&logoColor=white" alt="Matplotlib">
@@ -12,90 +13,82 @@
 </p>
 
 
-A deep learning web app that classifies **potato leaf diseases** — *Early Blight*, *Late Blight*, or *Healthy* — using a **Convolutional Neural Network (CNN)** trained in TensorFlow and deployed with Flask.
+A deep learning web application that classifies **crop leaf diseases** — *Early Blight*, *Late Blight*, or *Healthy* — using **Transfer Learning with VGG16 (CNN)** trained in TensorFlow and deployed with Flask.
 
 ---
 
 ## 📘 Project Overview
-This project helps **farmers and researchers** detect potato leaf diseases quickly and accurately.  
-The CNN model is trained on the *Potato Leaf Disease Dataset* from Kaggle and integrated with a Flask web app for **real-time image-based predictions**.
+This project assists **farmers and agricultural researchers** in identifying crop leaf diseases **quickly and accurately**.  
+The VGG16-based model is trained on a **Crop Leaf Disease Dataset** (Kaggle) and integrated with a Flask web application for **real-time predictions** from uploaded images.
 
 ---
 
 ## 🧠 Model Details
 
 ### 📊 Dataset
-**Source:** [Potato Leaf Disease Dataset (Kaggle)](https://www.kaggle.com/datasets/muhammadardiputra/potato-leaf-disease-dataset)  
+**Source:** Crop Leaf Disease Dataset (Kaggle)
+
 **Classes:**
-- Potato — Early Blight  
-- Potato — Late Blight  
-- Potato — Healthy  
+- Early Blight  
+- Late Blight  
+- Healthy  
 
 ---
 
-### 🧩 CNN Architecture
-A custom **Convolutional Neural Network** built using **TensorFlow**:
-
-- Convolutional + MaxPooling layers for feature extraction  
-- Dense layers for classification  
-- ReLU activation & Softmax output layer  
+### 🧩 Model Architecture — VGG16 Transfer Learning
+A **VGG16-based CNN** model built using TensorFlow and fine-tuned for crop disease classification.
 
 | Parameter | Value |
 |------------|--------|
-| **Model Type** | Convolutional Neural Network (CNN) |
+| **Model Type** | Transfer Learning (VGG16 + Custom Layers) |
 | **Input Image Size** | 255 × 255 × 3 |
 | **Output Classes** | Early Blight, Late Blight, Healthy |
 | **Optimizer** | Adam |
 | **Loss Function** | Sparse Categorical Crossentropy |
 | **Batch Size** | 32 |
 | **Epochs** | 70 (with EarlyStopping) |
+| **Pre-trained Weights** | ImageNet |
 
 ---
 
 ## ⚙️ Flask Backend
 
 ### 🔹 Model Loading
-The trained CNN model **`Crop_Disease_Classification.h5`** is loaded for inference.
+The trained model **`Crop_Disease_Classification_VGG16.h5`** is loaded for inference.
 
-### 🔹 Prediction Function
-✅ Converts uploaded image into a tensor  
-✅ Feeds it to the CNN model  
-✅ Returns the predicted **class label** and **confidence score**
+### 🔹 Prediction Workflow
+- Preprocess uploaded image
+- Convert to tensor
+- Run through VGG16 model
+- Predict **class label** + **confidence score**
 
-### 🔹 Routes
-- `'/'` → Handles image upload and prediction display  
-- Validates allowed file types (`jpg`, `jpeg`, `png`)  
+### 🔹 Flask Routes
+- `'/'` → Image upload & prediction display  
+- Supports: `jpg`, `jpeg`, `png` formats  
 
 ---
 
 ## 🌐 Frontend (index.html)
-A clean, responsive **Bootstrap 5** interface displays:
-
-- Image upload section  
-- Uploaded image preview  
-- Predicted label and confidence percentage  
+A **Bootstrap 5 responsive interface** featuring:
+- Image upload panel
+- Preview of uploaded leaf image
+- Predicted disease + confidence %
 
 **Example Output:**
-- Predicted Label: Potato — Early Blight
+- Predicted Label: Early Blight  
 - Confidence: 92.4%
 
-<h2>📸 Preview</h2>
-<p align="center">
-  <img src="https://github.com/Raj96659/Potato_Disease_Classification_using_CNN/blob/main/Screenshot%202025-11-02%20093737.png" width="500">
-</p>
-<p align="center">
-  <img src="https://github.com/Raj96659/Potato_Disease_Classification_using_CNN/blob/main/Screenshot%202025-11-02%20093813.png" width="500">
-</p>
+---
 
 ## 🚀 Future Improvements
+- Support additional crops (tomato, corn, rice, etc.)
+- Deploy on Render / Vercel / HuggingFace Spaces
+- Integrate prediction logging database
+- Add voice-based output
 
-- Extend support for multiple crops (e.g., tomato, corn, etc.)
-- Deploy on Render, Vercel, or Hugging Face Spaces
-- Add database logging for predictions
-- Introduce voice-based output
+---
 
 ## 🙌 Acknowledgements
-
-- Dataset: Potato Leaf Disease Dataset – Kaggle
+- Dataset: Crop Disease Dataset – Kaggle
 - Frameworks: TensorFlow, Flask
 - Developer: Raj Sonawane
