@@ -13,20 +13,32 @@
 </p>
 
 
-A deep learning web application that classifies **crop leaf diseases** — *Early Blight*, *Late Blight*, or *Healthy* — using **Transfer Learning with VGG16 (CNN)** trained in TensorFlow and deployed with Flask.
+A deep learning web application that classifies **crop leaf diseases** — *Early Blight*, *Late Blight*, or *Healthy* — using  **Custom CNN** and **Transfer Learning with VGG16** trained in TensorFlow and deployed with Flask.
 
 ---
 
 ## 📘 Project Overview
-This project assists **farmers and agricultural researchers** in identifying crop leaf diseases **quickly and accurately**.  
-The VGG16-based model is trained on a **Crop Leaf Disease Dataset** (Kaggle) and integrated with a Flask web application for **real-time predictions** from uploaded images.
+This project assists **farmers and agricultural researchers** in diagnosing crop leaf diseases quickly and accurately.  
+Two deep learning models were experimented with:
+- **Custom CNN model** built from scratch
+- **VGG16 transfer learning model** with ImageNet weights
+
+The best-performing model is integrated into a Flask web app for **real-time predictions** using uploaded crop leaf images.
+
 
 ---
 
 ## 🧠 Model Details
 
+### 🧩 Models Used
+| Model | Technique | Status |
+|--------|------------|---------|
+| Custom CNN | Developed from scratch | Used for baseline |
+| VGG16 Transfer Learning | Fine-tuned on crop dataset | Selected for deployment |
+
 ### 📊 Dataset
-**Source:** Crop Leaf Disease Dataset (Kaggle)
+Source: Crop Leaf Disease Dataset (Kaggle)
+
 
 **Classes:**
 - Early Blight  
